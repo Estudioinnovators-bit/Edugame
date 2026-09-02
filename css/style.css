@@ -1,1 +1,214 @@
 style.css
+/* ===== EDUGAME - DISEÑO MODERNO ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef7ff, #f5efff, #ecfff7);
+    color: #243447;
+    line-height: 1.6;
+}
+
+/* ===== ENCABEZADO ===== */
+
+header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+    color: #5b4bdb;
+    font-size: 2rem;
+}
+
+nav a {
+    color: #334155;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #5b4bdb;
+}
+
+/* ===== SECCIONES ===== */
+
+section {
+    padding: 80px 8%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== TITULOS ===== */
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4338ca;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at top left, rgba(99, 102, 241, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.18), transparent 35%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #3730a3;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.15rem;
+    color: #475569;
+}
+
+/* ===== BOTONES ===== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.35);
+}
+
+/* ===== TARJETAS ===== */
+
+.cards,
+.features,
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #4f46e5;
+    margin: 12px 0;
+}
+
+.card p {
+    color: #64748b;
+}
+
+/* ===== ICONOS / EMOJIS ===== */
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* ===== FONDOS DE SECCIONES ===== */
+
+section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ===== ANIMACIÓN ===== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero,
+.card {
+    animation: aparecer 0.8s ease;
+}
+
+/* ===== CELULARES ===== */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
